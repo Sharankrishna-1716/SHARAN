@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+
+
+}
+ul{
+    display: flex;
+    justify-content:space-between ;
+}
+li{
+    text-decoration:none;
+    list-style: none;
+}
+.one{
+    background-color: aqua;
+    border: 4px solid plum;--
+    height: 160px;
+    width: 100vw;
+}.two{
+    background-color: rgb(200, 255, 0);
+    border: 4px solid rgba(160, 221, 175, 0.764);
+    height: 160px;
+    width: 100vw;
+}.three{
+    background-color: rgb(255, 0, 21);
+    border: 4px solid rgb(160, 166, 221);
+    height: 160px;
+    width: 100vw;
+}
