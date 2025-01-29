@@ -1,0 +1,369 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #121212; /* Dark background */
+    color: #E0E0E0; /* Light gray text */
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333; /* Dark gray background */
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo a {
+    color: #FFFFFF; /* White text */
+    font-size: 26px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #E0E0E0; /* Light gray text */
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #A1A1A1; /* Slightly darker gray on hover */
+    transform: scale(1.1);
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #A1A1A1; /* Accent gray */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::before {
+    transform: scaleX(1);
+}
+
+/* Typing Animation for Intro Section */
+.typing {
+    font-size: 22px;
+    color: #E0E0E0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #E0E0E0;
+    width: 0;
+    animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Hero Section */
+.total {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Intro */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.image {
+    width: 250px;
+    border-radius: 50%;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.image.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.para {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #E0E0E0;
+    max-width: 600px;
+    animation: fadeInLeft 2s ease-out;
+}
+
+/* Section Styles */
+section {
+    padding: 50px 20px;
+    animation: fadeInUp 1s ease-in-out;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #444; /* Darker gray line */
+}
+
+section h1, section h2 {
+    color: #A1A1A1;
+    text-shadow: 0 0 15px #A1A1A1;
+}
+
+/* Drawing Horizontal Line Effect */
+hr {
+    height: 2px;
+    background: #A1A1A1; /* Accent gray line */
+    border: none;
+    width: 0%;
+    animation: drawLine 2s ease-out forwards;
+}
+
+@keyframes drawLine {
+    to {
+        width: 100%;
+    }
+}
+
+/* Photos Section */
+.image-small {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-small:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Studies Section */
+.study h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #A1A1A1;
+    text-shadow: 0 0 15px #A1A1A1;
+}
+
+.study p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #E0E0E0;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Projects Section */
+.projects h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #A1A1A1;
+    text-shadow: 0 0 15px #A1A1A1;
+}
+
+.projects h2 {
+    font-size: 24px;
+    color: #A1A1A1;
+    margin-bottom: 15px;
+}
+
+.projects p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #E0E0E0;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Project Links */
+.Links a {
+    font-size: 18px;
+    color: #E0E0E0;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.Links a:hover {
+    color: #A1A1A1; /* Slightly darker gray on hover */
+}
+
+.Links a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #A1A1A1; /* Accent gray line */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.Links a:hover::before {
+    transform: scaleX(1);
+}
+
+/* Enquiry Form */
+.enquiry form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #1e1e1e; /* Darker background for form */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #E0E0E0;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #333; /* Dark gray borders */
+    border-radius: 6px;
+    font-size: 16px;
+    color: #E0E0E0;
+    background-color: #2b2b2b; /* Darker input field */
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #A1A1A1; /* Accent color on focus */
+    outline: none;
+    transform: scale(1.02);
+}
+
+button {
+    background-color: #A1A1A1; /* Accent gray for button */
+    color: #121212;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #888; /* Slightly darker on hover */
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #A1A1A1;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
